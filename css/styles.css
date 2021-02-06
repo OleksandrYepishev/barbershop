@@ -1,0 +1,378 @@
+:root {
+  --white-text: #ffffff;
+  --orange-text: #ff6c00;
+  --title-text: #303030;
+  --secondary-text: #555555;
+  --gray-text: #9da4bd;
+  --gray-text-op40: rgba(157, 164, 189, 0.4);
+  --gray-text-op60: rgba(157, 164, 189, 0.6);
+
+  --bcc: #191c26;
+  --secondary-bg-color: #f7f7f7;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  font-family: Open Sans, sans-serif;
+}
+
+body {
+  font-family: Open Sans, sans-serif;
+}
+
+/* Общий стиль передзагаловков */
+.pretitle {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* Стиль для основных заголовков */
+.title {
+  font-family: 'Raleway', sans-serif;
+}
+
+/* Общий стиль для описания секций (послезаголовков) */
+.short-decr {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+}
+
+/* =====Герой====== */
+/* Врменный фон */
+.header {
+  background-color: #000000;
+}
+
+.header a {
+  color: var(--white-text);
+}
+
+.site-nav > .nav {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
+}
+
+.site-nav .social-link {
+  color: var(--title-text);
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 15px;
+  letter-spacing: 0.2em;
+
+  transform: rotate(-90deg);
+}
+
+.sign {
+  background: transparent;
+  color: var(--white-text);
+
+  border: 1px solid #ff6c00;
+  border-radius: 25px;
+
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.nav:hover {
+  color: var(--orange-text);
+}
+
+.sign:hover,
+.sign:focus {
+  background-color: var(--orange-text);
+  color: var(--white-text);
+}
+
+/* ======Герой====== */
+/* временный бэкграунд */
+.hero {
+  background-color: black;
+}
+
+.hero-pretitle {
+  color: var(--gray-text-op60);
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.hero-title {
+  color: var(--white-text);
+  font-weight: bold;
+  font-size: 72px;
+  line-height: 1.18;
+  letter-spacing: 0.05em;
+}
+
+.hero-desc {
+  color: var(--gray-text);
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+}
+
+.hero-btn {
+  background-color: transparent;
+  border: none;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  color: var(--gray-text-op60);
+}
+
+.hero-btn:hover,
+.hero-btn:focus,
+.hero-btn:active {
+  color: var(--white-text);
+}
+
+/* =====О НАС======= */
+
+.about-pretitle {
+  color: var(--title-text);
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.about-title {
+  color: var(--title-text);
+  font-weight: bold;
+  font-size: 42px;
+  line-height: 1.17;
+  letter-spacing: 0.05em;
+}
+
+.about-shortdescr {
+  color: var(--secondary-text);
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+}
+
+.about-descr {
+  color: var(--secondary-text);
+  font-size: 14px;
+  line-height: 1.86;
+  letter-spacing: 0.02em;
+}
+
+.about a {
+  color: var(--title-text);
+}
+
+/* ======Услуги и цены====== */
+/* временный бэкграунд */
+.price {
+  background-color: black;
+}
+
+.price-pretitle {
+  color: var(--gray-text-op60);
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.price-title {
+  color: var(--white-text);
+  font-weight: bold;
+  font-size: 42px;
+  line-height: 1.17;
+  letter-spacing: 0.05em;
+}
+
+.table {
+  color: var(--gray-text);
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+}
+
+/* ========Старая школа====== */
+.oldschool-list-num {
+  color: var(--title-text);
+  font-weight: bold;
+  font-size: 42px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+
+.oldschool-list-text {
+  color: var(--title-text);
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  text-align: center;
+}
+
+.oldschool-list li {
+  background-color: var(--secondary-bg-color);
+}
+
+.oldschool-pretitle {
+  color: var(--title-text);
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.oldschool-title {
+  color: var(--title-text);
+  font-weight: bold;
+  font-size: 42px;
+  line-height: 1.17;
+  letter-spacing: 0.05em;
+}
+
+.oldschool-descr {
+  color: var(--secondary-text);
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+}
+
+/* ======Наши мастера====== */
+.masters {
+  background-color: var(--secondary-bg-color);
+}
+
+.masters-pretitle {
+  color: var(--title-text);
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.masters-title {
+  color: var(--title-text);
+  font-weight: bold;
+  font-size: 42px;
+  line-height: 1.17;
+  letter-spacing: 0.05em;
+}
+
+.master-name {
+  color: var(--title-text);
+  font-size: 18px;
+  line-height: 1.39;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.master-work {
+  color: var(--orange-text);
+  font-size: 14px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+/* =======Портфолиь====== */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.portfolio-descr {
+  color: var(--title-text);
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* ======Онлайн-запись + контакты====== */
+
+.contacts {
+  background-color: var(--bcc);
+}
+
+.contacts-title {
+  color: var(--white-text);
+  font-weight: bold;
+  font-size: 42px;
+  line-height: 1.17;
+  letter-spacing: 0.05em;
+}
+
+.address-list,
+.work-time {
+  color: var(--gray-text);
+  font-style: normal;
+  font-size: 18px;
+  line-height: 1.67;
+
+  letter-spacing: 0.02em;
+}
+
+.work-text {
+  color: var(--white-text);
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.signform input::placeholder,
+.signform textarea::placeholder {
+  color: var(--gray-text-op40);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+
+  letter-spacing: 0.1em;
+}
+
+.signform input,
+.signform textarea {
+  color: var(--grey-text-op40);
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--grey-text-op40);
+}
+
+.signform input:active,
+.signform textarea:active {
+  color: var(--white-text);
