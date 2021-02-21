@@ -24,6 +24,28 @@ body {
   font-family: Open Sans, sans-serif;
 }
 
+/* img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+} */
+
+p,
+ul,
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+/* Общий контейнер всех секций */
+
+.container {
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+  outline: 1px solid red;
+}
+
 /* Общий стиль передзагаловков */
 .pretitle {
   font-weight: 600;
@@ -47,12 +69,38 @@ body {
 
 /* =====Герой====== */
 /* Врменный фон */
-.header {
+.header .container {
   background-color: #000000;
+  position: relative;
 }
 
 .header a {
   color: var(--white-text);
+}
+
+.site-nav,
+.nav-list,
+.nav-contacts {
+  display: flex;
+}
+
+.site-nav {
+  justify-content: space-between;
+  align-items: center;
+
+  padding-top: 28px;
+}
+
+.nav-list li {
+  margin-left: 40px;
+}
+
+.nav-contacts {
+  margin-left: auto;
+}
+
+.nav-contacts li:not(:last-child) {
+  margin-right: 40px;
 }
 
 .site-nav > .nav {
@@ -63,7 +111,7 @@ body {
 }
 
 .site-nav .social-link {
-  color: var(--title-text);
+  color: var(--white-text);
   font-weight: 600;
   font-size: 11px;
   line-height: 15px;
@@ -73,9 +121,7 @@ body {
 }
 
 .sign {
-  background: transparent;
-  color: var(--white-text);
-
+  padding: 12px 20px;
   border: 1px solid #ff6c00;
   border-radius: 25px;
 
@@ -84,6 +130,9 @@ body {
   line-height: 1.33;
   letter-spacing: 0.09em;
   text-transform: uppercase;
+
+  background: transparent;
+  color: var(--white-text);
 }
 
 .nav:hover {
@@ -96,45 +145,97 @@ body {
   color: var(--white-text);
 }
 
+.media-list {
+  display: flex;
+}
+
+.media-list li {
+  margin-left: 40px;
+}
+
+.social-link:hover {
+  color: var(--orange-text);
+}
+
+.header .media-list {
+  position: absolute;
+  bottom: -399px;
+  /* left: -42px; */
+  transform: rotate(-90deg);
+  z-index: 2;
+}
 /* ======Герой====== */
 /* временный бэкграунд */
-.hero {
-  background-color: black;
+.hero .container {
+  background: black;
+  padding-top: 184px;
+  padding-left: 215px;
 }
 
 .hero-pretitle {
-  color: var(--gray-text-op60);
+  margin-bottom: 20px;
+
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+
+  color: var(--gray-text-op60);
 }
 
 .hero-title {
-  color: var(--white-text);
+  margin-bottom: 20px;
+
   font-weight: bold;
   font-size: 72px;
   line-height: 1.18;
   letter-spacing: 0.05em;
+
+  color: var(--white-text);
 }
 
 .hero-desc {
-  color: var(--gray-text);
+  margin-bottom: 142px;
+
   font-weight: normal;
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
+
+  color: var(--gray-text);
+}
+
+.hero-btns {
+  text-align: right;
+  padding-bottom: 40px;
+}
+
+.hero-btn:first-child {
+  text-align: left;
+}
+
+.hero-btn:last-child {
+  margin-left: 26px;
+  text-align: right;
 }
 
 .hero-btn {
-  background-color: transparent;
   border: none;
+  background: transparent;
+
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
+
   letter-spacing: 0.1em;
+
   color: var(--gray-text-op60);
+  text-transform: capitalize;
+
+  width: 60px;
+  height: 24px;
+  border-bottom: 1px solid;
 }
 
 .hero-btn:hover,
@@ -145,6 +246,23 @@ body {
 
 /* =====О НАС======= */
 
+.about .container {
+  display: flex;
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+
+.about-images {
+  display: flex;
+  margin-right: 64px;
+  padding: 0;
+  width: 50%;
+}
+
+.about-images li:first-child {
+  margin-right: 30px;
+}
+
 .about-pretitle {
   color: var(--title-text);
   font-weight: 600;
@@ -152,6 +270,7 @@ body {
   line-height: 1.36;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  margin-bottom: 20px;
 }
 
 .about-title {
@@ -160,6 +279,7 @@ body {
   font-size: 42px;
   line-height: 1.17;
   letter-spacing: 0.05em;
+  margin-bottom: 20px;
 }
 
 .about-shortdescr {
@@ -167,6 +287,7 @@ body {
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
+  margin-bottom: 20px;
 }
 
 .about-descr {
@@ -174,6 +295,7 @@ body {
   font-size: 14px;
   line-height: 1.86;
   letter-spacing: 0.02em;
+  margin-bottom: 52px;
 }
 
 .about a {
@@ -182,8 +304,24 @@ body {
 
 /* ======Услуги и цены====== */
 /* временный бэкграунд */
-.price {
+
+.price .container {
+  display: flex;
+  flex-flow: column;
+  padding-top: 130px;
+  padding-bottom: 130px;
+
   background-color: black;
+}
+
+.table-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.table {
+  padding: 30px 40px;
+  width: 50%;
 }
 
 .price-pretitle {
@@ -210,7 +348,42 @@ body {
   letter-spacing: 0.02em;
 }
 
+.price .sign {
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
 /* ========Старая школа====== */
+.oldschool .container {
+  display: flex;
+  justify-content: center;
+  padding-top: 121px;
+  padding-bottom: 130px;
+}
+
+.oldschool-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  flex-basis: calc(100% / 2);
+  width: 400px;
+  margin-right: 130px;
+}
+
+.oldschool-list li {
+  width: 170px;
+  height: 133px;
+}
+
+.oldschool-list li:nth-child(2n + 1) {
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.oldschool-list li:nth-child(2n) {
+  margin-top: 30px;
+}
+
 .oldschool-list-num {
   color: var(--title-text);
   font-weight: bold;
@@ -230,72 +403,143 @@ body {
 
 .oldschool-list li {
   background-color: var(--secondary-bg-color);
+
+  flex-flow: column;
+  align-items: center;
+  padding: 20px 24px;
+}
+
+.oldschool-content {
+  display: flex;
+  flex-flow: column;
+  width: 500px;
 }
 
 .oldschool-pretitle {
-  color: var(--title-text);
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+
+  color: var(--title-text);
 }
 
 .oldschool-title {
-  color: var(--title-text);
+  margin-top: 20px;
+
   font-weight: bold;
   font-size: 42px;
   line-height: 1.17;
   letter-spacing: 0.05em;
+
+  color: var(--title-text);
 }
 
 .oldschool-descr {
-  color: var(--secondary-text);
+  margin-top: 20px;
+
   font-weight: normal;
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
+
+  color: var(--secondary-text);
 }
 
 /* ======Наши мастера====== */
-.masters {
+.masters .container {
+  padding-bottom: 130px;
+  padding-top: 130px;
+
   background-color: var(--secondary-bg-color);
 }
 
+.masters-list {
+  display: flex;
+  flex-basis: calc((100%-30px * 2) / 3);
+  padding: 0;
+}
+
+.masters-list li:not(:nth-of-type(3n)) {
+  margin-right: 30px;
+}
+
 .masters-pretitle {
-  color: var(--title-text);
+  margin-bottom: 20px;
+
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+
+  color: var(--title-text);
 }
 
 .masters-title {
-  color: var(--title-text);
+  margin-bottom: 44px;
+
   font-weight: bold;
   font-size: 42px;
   line-height: 1.17;
   letter-spacing: 0.05em;
+
+  color: var(--title-text);
 }
 
 .master-name {
-  color: var(--title-text);
+  margin-top: 30px;
+  margin-bottom: 8px;
+
   font-size: 18px;
   line-height: 1.39;
   text-align: center;
   letter-spacing: 0.02em;
+
+  color: var(--title-text);
 }
 
 .master-work {
-  color: var(--orange-text);
+  margin-bottom: 30px;
+
   font-size: 14px;
   line-height: 1.36;
   text-align: center;
   letter-spacing: 0.02em;
+
+  color: var(--orange-text);
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons li {
+  width: 44px;
+  height: 44px;
+}
+
+.social-icons li:not(:last-child) {
+  margin-right: 10px;
 }
 
 /* =======Портфолиь====== */
+.portfolio .container {
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+
+.portfolio-list {
+  display: flex;
+  flex-basis: calc((100%-30px * 3) / 4);
+  padding: 0;
+}
+
+.portfolio-list li:not(:nth-of-type(4n)) {
+  margin-right: 30px;
+}
 
 .visually-hidden {
   position: absolute;
@@ -312,6 +556,8 @@ body {
 }
 
 .portfolio-descr {
+  margin-bottom: 44px;
+
   color: var(--title-text);
   font-weight: 600;
   font-size: 11px;
@@ -323,40 +569,33 @@ body {
 
 /* ======Онлайн-запись + контакты====== */
 
-.contacts {
-  background-color: var(--bcc);
+.contacts .container {
+  background: rgba(25, 28, 38, 1);
+  display: flex;
+  justify-content: space-between;
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+
+#onlinesign,
+#contacts {
+  width: 50%;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+#contacts {
+  padding-left: 100px;
 }
 
 .contacts-title {
   color: var(--white-text);
-  font-weight: bold;
-  font-size: 42px;
-  line-height: 1.17;
-  letter-spacing: 0.05em;
-}
-
-.address-list,
-.work-time {
-  color: var(--gray-text);
-  font-style: normal;
-  font-size: 18px;
-  line-height: 1.67;
-
-  letter-spacing: 0.02em;
-}
-
-.work-text {
-  color: var(--white-text);
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1.36;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  margin-bottom: 44px;
 }
 
 .signform input::placeholder,
 .signform textarea::placeholder {
-  color: var(--gray-text-op40);
+  color: var(--grey-text-op40);
   text-transform: uppercase;
   font-weight: 600;
   font-size: 11px;
@@ -367,12 +606,99 @@ body {
 
 .signform input,
 .signform textarea {
-  color: var(--grey-text-op40);
+  color: var(--gray-text-op40);
   background: transparent;
   border: none;
-  border-bottom: 1px solid var(--grey-text-op40);
+  border-bottom: 1px solid var(--gray-text-op40);
+}
+
+.signform input[name='name'] {
+  width: 270px;
+  margin-right: 30px;
+  padding-bottom: 8px;
+}
+
+.signform input[name='tel'] {
+  width: 260px;
+  padding-bottom: 8px;
+
+  /* margin-right: 40px; */
+}
+
+.signform textarea[name='msg'] {
+  width: 560px;
+  margin-top: 40px;
 }
 
 .signform input:active,
 .signform textarea:active {
   color: var(--white-text);
+}
+
+.online-sign {
+  /* display: block; */
+  margin-top: 44px;
+}
+
+.contacts-links {
+  margin-bottom: 70px;
+}
+
+/* .contacts-links a {
+} */
+
+/* ============= */
+
+.contacts-links a,
+.worktime {
+  display: block;
+
+  font-size: 18px;
+  line-height: 1.67;
+
+  letter-spacing: 0.02em;
+
+  color: var(--gray-text);
+}
+
+.contacts-links a[name='mail'] {
+  text-decoration-line: underline;
+}
+
+.contacts-links a:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.worktime-title {
+  color: var(--white-text);
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  margin-bottom: 20px;
+}
+
+/* === FOOTER === */
+.footer .container {
+  padding-top: 56px;
+  padding-bottom: 56px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer p,
+.footer a {
+  color: var(--gray-text);
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+
+  letter-spacing: 0.2em;
+}
+
+.footer a {
+  color: rgba(48, 48, 48, 1);
+}
